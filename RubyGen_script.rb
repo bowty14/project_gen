@@ -10,19 +10,16 @@ class Project
     FileUtils.mkdir_p "../#{@project_name}/spec"
     FileUtils.touch "../#{@project_name}/lib/#{@project_name}.rb"
     FileUtils.touch "../#{@project_name}/spec/#{@project_name}_spec.rb"
+    FileUtils.touch "../#{@project_name}/Gemfile"
     File.open("../#{@project_name}/Gemfile", 'a') {|f| f.write(" 
-      source 'https://rubygems.org' 
-      gem 'pry' 
-      gem 'rspec' ") }
-    File.open("../#{@project_name}/lib/#{@project_name}.rb", 'a') {|f| f.write("
-      require ('pry')
-
-      class
-
-      end") }
+source 'https://rubygems.org' 
+gem 'pry' 
+gem 'rspec' ") }
+    File.open("../#{@project_name}/lib/#{@project_name}.rb", 'a') {|f| f.write("require ('pry')" + "\n" + "class" + "\n" + "end") }
     File.open("../#{@project_name}/spec/#{@project_name}_spec.rb", 'a') {|f| f.write("
-      require ('pry')
-      require ('rspec')") }
+require ('pry')
+require ('rspec')") }
+File.open("../#{@project_name}/README.md", 'a') {|f| f.write("#{Time.now.month}" + "#{Time.now.day}" + "#{Time.now.year}") }
   end
 end
 
