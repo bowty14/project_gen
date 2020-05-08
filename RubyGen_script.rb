@@ -12,9 +12,9 @@ class Project
     FileUtils.touch "../#{@project_name}/spec/#{@project_name}_spec.rb" 
     FileUtils.touch "../#{@project_name}/Gemfile"
     File.open("../#{@project_name}/Gemfile", 'a') {|f| f.write(
-      "source 'https://rubygems.org" +
+      "source 'https://rubygems.org' " +
       "\n" + 
-      "gem 'pry'" +
+      "gem 'pry' " +
       "\n"+
       "gem 'rspec' ") }
       File.open("../#{@project_name}/#{@project_name}_script.rb", 'a') {|f| f.write("#!/usr/bin/env/ ruby" +
@@ -31,7 +31,20 @@ class Project
       "\n" + 
       "require ('pry')" +
       "\n" +
-      "require ('rspec')") }
+      "require ('rspec')" +
+      "\n" +
+      "\n" +
+      "describe('') do" +
+      "\n " + " " +
+          "it('') do" +
+        "\n" + " " + " " + " " + 
+            "blah = Blah.new('')" +
+        "\n " + " " + " " + 
+            "expect(blah()).to(eq('blah'))" +
+          "\n " + " " + 
+          "end" +
+      "\n" +
+    "end" ) }
 File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
   "##" + " " + "Project created on" + " " + "#{Time.now.month}/" + "#{Time.now.day}/" + "#{Time.now.year}" + 
   "\n" + 
@@ -71,6 +84,17 @@ File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
   "\n" +
   "*" +
   "\n" + 
+  "\n" +
+  "## Known Bugs" +
+  "\n" +
+  "No known bugs at this time." +
+  "\n" +
+  "\n" +
+  "## Support and contact details" +
+  "\n" +
+  "_Have a bug or an issue with this application? [Open a new issue](https://github.com/github-user-name/github-project-name/issues) here on GitHub.com_" +
+  "\n" +
+  "\n" +
   "## Technologies Used" +
   "\n" + 
   "*" + 
@@ -91,10 +115,10 @@ File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
   end
 end
 
-
 puts "What would you like your Ruby file to be called?"
 file_name = gets.chomp
 project = Project.new(file_name)
-puts (project.project_gen)
+puts (project.project_gen) 
+
 
 
