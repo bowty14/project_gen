@@ -20,7 +20,7 @@ gem 'rspec' ") }
 require ('pry')
 require ('rspec')") }
 File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
-  "##" + " " + "#{Time.now.month}/" + "#{Time.now.day}/" + "#{Time.now.year}" + 
+  "##" + " " + "Project created on" + " " + "#{Time.now.month}/" + "#{Time.now.day}/" + "#{Time.now.year}" + 
   "\n" + 
   "\n" + 
   "# Project name" + 
