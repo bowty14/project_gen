@@ -9,7 +9,7 @@ class Project
     FileUtils.mkdir_p "../#{@project_name}/lib"
     FileUtils.mkdir_p "../#{@project_name}/spec"
     FileUtils.touch "../#{@project_name}/lib/#{@project_name}.rb"
-    FileUtils.touch "../#{@project_name}/spec/#{@project_name}_spec.rb"
+    FileUtils.touch "../#{@project_name}/spec/#{@project_name}_spec.rb" 
     FileUtils.touch "../#{@project_name}/Gemfile"
     File.open("../#{@project_name}/Gemfile", 'a') {|f| f.write(
       "source 'https://rubygems.org" +
@@ -17,6 +17,9 @@ class Project
       "gem 'pry'" +
       "\n"+
       "gem 'rspec' ") }
+      File.open("../#{@project_name}/#{@project_name}_script.rb", 'a') {|f| f.write("#!/usr/bin/env/ ruby" +
+        "\n" +
+        "require('./lib/#{@project_name}.rb')") }
     File.open("../#{@project_name}/lib/#{@project_name}.rb", 'a') {|f| f.write(
       "require ('pry')" + 
       "\n" + 
@@ -24,7 +27,9 @@ class Project
       "class" + 
       "\n" + 
       "end") }
-    File.open("../#{@project_name}/spec/#{@project_name}_spec.rb", 'a') {|f| f.write("require ('pry')" +
+    File.open("../#{@project_name}/spec/#{@project_name}_spec.rb", 'a') {|f| f.write("require ('#{@project_name}.rb')" +
+      "\n" + 
+      "require ('pry')" +
       "\n" +
       "require ('rspec')") }
 File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
