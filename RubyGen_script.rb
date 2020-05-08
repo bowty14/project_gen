@@ -24,7 +24,8 @@ class Project
       "class" + 
       "\n" + 
       "end") }
-    File.open("../#{@project_name}/spec/#{@project_name}_spec.rb", 'a') {|f| f.write("require ('pry')" +
+    File.open("../#{@project_name}/spec/#{@project_name}_spec.rb", 'a') {|f| f.write("require ('#{@project_name}.rb')
+      "require ('pry')" +
       "\n" +
       "require ('rspec')") }
 File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
