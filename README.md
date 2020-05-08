@@ -13,11 +13,6 @@ _This application is designed to create all the directories/files needed to crea
 
 ## Setup/Installation Requirements
 
-* Navigate to where you want this application to be saved, i.e.:
-```cd desktop```
-* Clone the file from GitHub with HTTPS
-```git clone https://github.com/bowty14/project_gen.git```
-
 _To Download Manually:_
 * Navigate to https://github.com/bowty14/project_gen.git
 * Click green "Clone or Download" button.
