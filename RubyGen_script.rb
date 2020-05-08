@@ -20,13 +20,24 @@ gem 'rspec' ") }
 require ('pry')
 require ('rspec')") }
 File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
-  "#{Time.now.month}" + "#{Time.now.day}" + "#{Time.now.year}" 
-  + "\n" + "\n" + 
-  "# Project name" + "\n" + "\n" + 
-  "#### By **Author(s)**" + "\n" + "\n" + 
-  "## Description" + "\n" + "\n" + 
-  "Tell your audience what your app does." + "\n" + "\n" + 
-  "## Specifications" + "\n" + "\n" + 
+  "##" + " " + "#{Time.now.month}/" + "#{Time.now.day}/" + "#{Time.now.year}" + 
+  "\n" + 
+  "\n" + 
+  "# Project name" + 
+  "\n" + 
+  "\n" + 
+  "#### By **Author(s)**" + 
+  "\n" + 
+  "\n" + 
+  "## Description" + 
+  "\n" + 
+  "\n" + 
+  "Tell your audience what your app does." + 
+  "\n" + 
+  "\n" + 
+  "## Specifications" + 
+  "\n" + 
+  "\n" + 
   "|   Behavior Description       |  Input Ex.   |        Output Ex.        |" + "\n" + 
   "|------------------------------|--------------|--------------------------|" + "\n" + 
   "|1.                            |              |                          |" + "\n" +
@@ -37,17 +48,33 @@ File.open("../#{@project_name}/README.md", 'a') {|f| f.write(
   "|6.                            |              |                          |" + "\n" +
   "|7.                            |              |                          |" + "\n" +
   "|8.                            |              |                          |" + "\n" + "\n" + 
-  "## Setup/Installation Requirements" + "\n" + 
-  "*" + "\n" + 
-  "*" + "\n" + "\n" + 
-  "## Technologies Used" 
-  "*" + "\n" + 
-  "*" + "\n" + 
-  "*" + "\n" + 
-  "*" + "\n" + "\n" + 
-  "### License" + "\n" + "\n" + 
-  "*This software is licensed under the MIT license* " + "\n" + "\n" + 
-  "Copyright (c) 2020 **Author(s)**") }
+  "## Setup/Installation Requirements" + 
+  "\n" + 
+  "*" +
+  "\n" + 
+  "*" +
+  "\n" +
+  "*" +
+  "\n" +
+  "*" +
+  "\n" + 
+  "## Technologies Used" +
+  "\n" + 
+  "*" + 
+  "\n" +
+  "*" + 
+  "\n" +
+  "*" + 
+  "\n" +
+  "*" + 
+  "\n" + 
+  "### License" + 
+  "\n" + 
+  "\n" + 
+  "*This software is licensed under the MIT license* " + 
+  "\n" + 
+  "\n" + 
+  "Copyright (c) 2020 **Author(s)**" )}
   end
 end
 
