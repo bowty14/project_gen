@@ -14,10 +14,12 @@ class Project
     File.open("../#{@project_name}/Gemfile", 'a') {|f| f.write(
       "source 'https://rubygems.org' " +
       "\n" + 
+      "gem 'sinatra' " +
+      "\n" +
       "gem 'pry' " +
       "\n"+
       "gem 'rspec' ") }
-      File.open("../#{@project_name}/#{@project_name}_script.rb", 'a') {|f| f.write("#!/usr/bin/env/ ruby" +
+      File.open("../#{@project_name}/script.rb", 'a') {|f| f.write("#!/usr/bin/env/ ruby" +
         "\n" +
         "require('./lib/#{@project_name}.rb')") }
     File.open("../#{@project_name}/lib/#{@project_name}.rb", 'a') {|f| f.write(
